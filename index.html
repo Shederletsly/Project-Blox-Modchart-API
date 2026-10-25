@@ -4,7 +4,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="project-blox-docs-version" content="8">
+<meta name="project-blox-docs-version" content="9">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
@@ -256,13 +256,13 @@ if(spookyDecor){
 }
 document.querySelectorAll('.card').forEach(c=>{c.addEventListener('pointermove',e=>{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;let r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`translateY(-4px) rotateX(${-y*2.2}deg) rotateY(${x*2.2}deg)`});c.addEventListener('pointerleave',()=>c.style.transform='')});
 </script><script>
-window.PROJECT_BLOX_DOCS_VERSION="8";
+window.PROJECT_BLOX_DOCS_VERSION="9";
 </script>
 
 <script>
 (function(){
-    const CHECK_INTERVAL_MS = 30000;
-    const CURRENT_VERSION = String(window.PROJECT_BLOX_DOCS_VERSION || "8");
+    const CHECK_INTERVAL_MS = 500;
+    const CURRENT_VERSION = String(window.PROJECT_BLOX_DOCS_VERSION || "9");
     let checking = false;
     let reloading = false;
 
@@ -318,7 +318,7 @@ window.PROJECT_BLOX_DOCS_VERSION="8";
     }
 
     window.addEventListener("load", function(){
-        setTimeout(checkForUpdate, 4000);
+        setTimeout(checkForUpdate, 500);
         setInterval(checkForUpdate, CHECK_INTERVAL_MS);
     });
 
